@@ -1,6 +1,6 @@
 {
   "name": "todu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI to mange your Project's To-Do's",
   "main": "./dist/cli.js",
   "bin": {
@@ -13,7 +13,7 @@
     "markdown"
   ],
   "scripts": {
-    "start": "npm run build && node dist/cli.js",
+    "start": "npm run build && cross-env NODE_ENV=development node dist/cli.js",
     "build": "tsc -p ."
   },
   "repository": {
@@ -30,6 +30,7 @@
     "@types/keypress": "^2.0.30",
     "@types/node": "^17.0.31",
     "@types/signal-exit": "^3.0.1",
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.16",
     "run-script-os": "^1.1.6",
     "ts-node": "^10.7.0",

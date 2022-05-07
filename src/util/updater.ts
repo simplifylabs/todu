@@ -12,8 +12,12 @@ const error = `
 
 export default class Updater {
   static async init() {
+    if (process.env.NODE_ENV == "development") return;
     let update = null;
-    const pkg = fs.readFileSync(path.join(__dirname, "..", "package.json"));
+
+    const pkgPath = path.join(__dirname, "..", "package.json");
+    const raw = fs.readFileSync(pkgPath, "utf8");
+    const pkg = JSON.parse(raw);
 
     try {
       update = await checkForUpdate(pkg);
