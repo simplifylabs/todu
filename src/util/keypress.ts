@@ -12,6 +12,7 @@ export default class Keypress {
     j: State.down,
     k: State.up,
     d: State.remove,
+    delete: State.remove,
     e: State.edit,
     a: State.add,
     space: State.toggle,
