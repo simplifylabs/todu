@@ -1,8 +1,6 @@
 import checkForUpdate from "update-check";
 import chalk from "chalk";
 
-const pkg = require("../../package.json");
-
 const error = `
    A new version of Todu is available.
    ${chalk.dim("Please run")} ${chalk.bgGray(
@@ -12,14 +10,12 @@ const error = `
 
 export default class Updater {
   static async init() {
-    // if (process.env.NODE_ENV == "development") return;
+    if (process.env.NODE_ENV == "development") return;
     let update = null;
 
     try {
-      update = await checkForUpdate(pkg);
-    } catch (e) {
-      console.log(e);
-    }
+      update = await checkForUpdate(require("../../package.json"));
+    } catch (e) {}
 
     if (update) {
       console.clear();
