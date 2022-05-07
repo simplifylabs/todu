@@ -2,6 +2,8 @@
 
 Minimalistic CLI to manage your Project's To-Do's.
 
+![Example](https://github.com/simplifylabs/todu/blob/main/example.gif?raw=true)
+
 ## Installation
 
 ### NPM
