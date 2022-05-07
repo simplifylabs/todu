@@ -1,6 +1,6 @@
 # Todu
 
-Minimalistic CLI to mange your Project's To-Do's.
+Minimalistic CLI to manage your Project's To-Do's.
 
 ## Installation
 
