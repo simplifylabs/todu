@@ -27,8 +27,8 @@ todu
 |    Q    |      Exit tudo      |       Escape        |
 |  Space  | Toggle current task | Enter, Left & Right |
 | Up/down |    Move up/down     |        J, K         |
-|    A    |      Add task       |       Delete        |
-|    D    | Delete current task |                     |
+|    D    | Delete current task |       Delete        |
+|    A    |      Add task       |                     |
 |    E    |  Edit current task  |                     |
 |    H    | Show/Hide help page |                     |
 
