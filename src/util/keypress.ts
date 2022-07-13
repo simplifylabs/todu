@@ -49,7 +49,7 @@ export default class Keypress {
       if (key && key.name == "backspace") return State.backspace();
       else if (char) State.type(char);
     } else {
-      if (this.bindings[String(key.name)]) this.bindings[key.name]();
+      if (this.bindings[String(key.name)]) this.bindings[key.name](key);
     }
   }
 }

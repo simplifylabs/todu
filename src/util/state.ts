@@ -28,16 +28,36 @@ export default class State {
     Render.update();
   }
 
-  static up() {
-    State.selected--;
-    if (State.selected < 0) State.selected = 0;
+  static up(key: any) {
+    if (key.shift) {
+      if (!State.list.length || State.selected == 0) return;
+      const element = State.list.splice(State.selected, 1);
+      State.list.splice(State.selected - 1, 0, element[0]);
+      State.sort();
+      Markdown.update();
+      State.selected = State.list.indexOf(element[0]);
+    } else {
+      State.selected--;
+      if (State.selected < 0) State.selected = 0;
+    }
+
     Render.update();
   }
 
-  static down() {
-    State.selected++;
-    if (State.selected > State.list.length - 1)
-      State.selected = State.list.length - 1;
+  static down(key: any) {
+    if (key.shift) {
+      if (!State.list.length || State.selected == State.list.length - 1) return;
+      const element = State.list.splice(State.selected, 1);
+      State.list.splice(State.selected + 1, 0, element[0]);
+      State.sort();
+      Markdown.update();
+      State.selected = State.list.indexOf(element[0]);
+    } else {
+      State.selected++;
+      if (State.selected > State.list.length - 1)
+        State.selected = State.list.length - 1;
+    }
+
     Render.update();
   }
 

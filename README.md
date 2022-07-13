@@ -22,15 +22,16 @@ todu
 
 ## Keybinds
 
-| **Key** |   **Description**   |      **Alias**      |
-| :-----: | :-----------------: | :-----------------: |
-|    Q    |      Exit tudo      |       Escape        |
-|  Space  | Toggle current task | Enter, Left & Right |
-| Up/down |    Move up/down     |        J, K         |
-|    D    | Delete current task |       Delete        |
-|    A    |      Add task       |                     |
-|    E    |  Edit current task  |                     |
-|    H    | Show/Hide help page |                     |
+|      **Key**      |   **Description**   |      **Alias**      |
+| :---------------: | :-----------------: | :-----------------: |
+|         Q         |      Exit tudo      |       Escape        |
+|       Space       | Toggle current task | Enter, Left & Right |
+|      Up/down      | Move cursor up/down |        J, K         |
+| Shift + (Up/down) |  Move task up/down  |   Shift + (J, K)    |
+|         D         | Delete current task |       Delete        |
+|         A         |      Add task       |                     |
+|         E         |  Edit current task  |                     |
+|         H         | Show/Hide help page |                     |
 
 ## Development
 

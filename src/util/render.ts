@@ -5,13 +5,14 @@ const help = `
    ${chalk.bold("Keybinds")}
    ${chalk.dim("Everything you need to know.")}
 
-      ${chalk.bold("Space")}    ${chalk.dim("Toggle current task")}
-      ${chalk.bold("Up/Down")}  ${chalk.dim("Move up/down")}
-      ${chalk.bold("A")}        ${chalk.dim("Add task")}
-      ${chalk.bold("D")}        ${chalk.dim("Delete current task")}
-      ${chalk.bold("E")}        ${chalk.dim("Edit current task")}
-      ${chalk.bold("H")}        ${chalk.dim("Show/Hide help page")}
-      ${chalk.bold("Q")}        ${chalk.dim("Exit tudo")}
+      ${chalk.bold("Space")}            ${chalk.dim("Toggle current task")}
+      ${chalk.bold("Up/Down")}          ${chalk.dim("Move cursor up/down")}
+      ${chalk.bold("Shift + Up/Down")}  ${chalk.dim("Move item up/down")}
+      ${chalk.bold("A")}                ${chalk.dim("Add task")}
+      ${chalk.bold("D")}                ${chalk.dim("Delete current task")}
+      ${chalk.bold("E")}                ${chalk.dim("Edit current task")}
+      ${chalk.bold("H")}                ${chalk.dim("Show/Hide help page")}
+      ${chalk.bold("Q")}                ${chalk.dim("Exit tudo")}
 
    ${chalk.dim("Press")} ${chalk.bold("Q")} ${chalk.dim("to exit this screen.")}
 `;
