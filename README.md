@@ -24,7 +24,7 @@ todu
 
 |      **Key**      |   **Description**   |      **Alias**      |
 | :---------------: | :-----------------: | :-----------------: |
-|         Q         |      Exit tudo      |       Escape        |
+|         Q         |      Exit todu      |       Escape        |
 |       Space       | Toggle current task | Enter, Left & Right |
 |      Up/down      | Move cursor up/down |        J, K         |
 | Shift + (Up/down) |  Move task up/down  |   Shift + (J, K)    |
