@@ -24,6 +24,10 @@ const empty = `      No tasks yet!
 export default class Render {
   static tab = "   ";
 
+  static get isSmall() {
+    return process.stdout.rows < 15;
+  }
+
   static update() {
     console.clear();
     if (State.help) console.log(help);
@@ -31,8 +35,14 @@ export default class Render {
   }
 
   static getListOutput() {
-    let output = `\n${this.tab}${chalk.bold("To-Do:")}\n`;
-    output += `${this.tab}${chalk.dim(`(Press "H" for help)`)}\n\n`;
+    let output = "";
+
+    if (Render.isSmall) {
+      output += "\n";
+    } else {
+      output += `\n${this.tab}${chalk.bold("To-Do:")}\n`;
+      output += `${this.tab}${chalk.dim(`(Press "H" for help)`)}\n\n`;
+    }
 
     output += this.getShowenTasks()
       .map((task: ITask | undefined) => {
@@ -51,12 +61,16 @@ export default class Render {
 
     if (!State.hasTasks) output += empty;
 
-    output += "\n";
+    if (!Render.isSmall) output += "\n";
     return output;
   }
 
   static getShowenTasks() {
-    let count = process.stdout.rows - 6;
+    let count = process.stdout.rows;
+
+    if (Render.isSmall) count -= 2;
+    else count -= 5;
+
     if (State.list.length < count) return State.listWithIndex;
 
     const countAroundSelected = Math.floor((count - 1) / 2);
